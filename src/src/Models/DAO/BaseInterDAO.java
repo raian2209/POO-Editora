@@ -11,6 +11,4 @@ public abstract void update(VO entity) throws SQLException;
 public abstract void delete(VO entity) throws SQLException;
 public abstract void findAll(VO entity) throws SQLException;
 public abstract void findById(VO entity) throws SQLException;
-
-
 }

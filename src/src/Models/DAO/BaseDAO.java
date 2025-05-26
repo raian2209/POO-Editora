@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 
 public abstract class BaseDAO<VO> implements BaseInterDAO<VO> {
     private static Connection connection = null;
-    private static final String url = "jdbc:postgresql://localhost:5432/";
-    private static final String user = "postgres";
-    private static final String password = "tradelous";
+    private static final String url = "jdbc:postgresql://localhost:5432/meu_banco";
+    private static final String user = "meu_usuario";
+    private static final String password = "minha_senha";
 
     public static Connection getConnection() throws SQLException {
         if (connection == null) {
