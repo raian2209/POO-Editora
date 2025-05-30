@@ -44,3 +44,29 @@ key (Matricula);
 alter table Alunos rename to Alunos_Uni;
 
 drop table Alunos_Uni;
+
+CREATE TABLE Aluno (
+matricula int not null,
+nome_aluno varchar (30) not null,
+Primary key (matricula));
+
+CREATE TABLE Disciplina (
+codigo int not null,
+nome_disciplina varchar (30) not null,
+Primary key (codigo));
+
+CREATE TABLE matricula_alunos (
+mat_A int references Aluno (matricula),
+cod_D int references Disciplina (codigo),
+Data_mat Date);
+
+CREATE TABLE matricula_alunos2 (
+mat_A int references Aluno (matricula),
+cod_D int references Disciplina (codigo),
+Data_mat Date,
+Primary key (mat_A, cod_D));
+
+insert into Aluno values (1, 'Adriana');
+insert into Aluno values (2, 'Alex');
+insert into Aluno values (4, 'Pedro');
+insert into Aluno values (3, 'Marcos');
